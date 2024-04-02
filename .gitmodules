@@ -1,0 +1,3 @@
+[submodule "JKNL_Engine/thirdparty/spdlog"]
+	path = JKNL_Engine/thirdparty/spdlog
+	url = https://github.com/gabime/spdlog

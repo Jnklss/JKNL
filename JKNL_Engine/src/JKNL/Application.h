@@ -8,8 +8,8 @@ namespace JKNL {
 	public:
 		Application();
 		virtual ~Application();
-
-		void Run();
+		 
+		virtual void Run();
 	};
 
 	//由客户端定义

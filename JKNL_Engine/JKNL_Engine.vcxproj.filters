@@ -27,12 +27,18 @@
     <ClInclude Include="src\JKNL\EntryPoint.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\JKNL\Log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\JKNL\core.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\JKNL\Application.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JKNL\Log.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
