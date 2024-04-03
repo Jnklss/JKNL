@@ -7,6 +7,7 @@ namespace JKNL {
 
 	void Log::Init() 
 	{
+		//               color [时间戳] [Logger's name]: [文本]  Source file and line 结束color
 		spdlog::set_pattern("%^[%T] [%n]: [%v] %@%$");
 		s_CoreLogger = spdlog::stdout_color_mt("JKNL");
 		s_CoreLogger->set_level(spdlog::level::trace);

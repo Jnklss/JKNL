@@ -9,8 +9,4 @@ namespace JKNL {
 	{
 	}
 
-	void Application::Run()
-	{
-		while (true);
-	}
 }
