@@ -10,6 +10,12 @@ workspace "JKNL_Engine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- 包含相对于根文件夹的目录(解决方案目录)
+IncludeDir = {}
+IncludeDir["GLFW"] = "JKNL_Engine/thirdparty/GLFW/include"
+
+include "JKNL_Engine/thirdparty/GLFW"
+
 project "JKNL_Engine"
     location "JKNL_Engine"
     kind "SharedLib"
@@ -28,7 +34,14 @@ project "JKNL_Engine"
     {
         "%{prj.name}/src",
         "%{prj.name}/thirdparty/spdlog/include",
-        "%{prj.name}/thirdparty/json11"
+        "%{prj.name}/thirdparty/json11",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW"  ,
+        "opengl32.lib"
     }
 
     filter "system:windows"

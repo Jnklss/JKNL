@@ -43,7 +43,6 @@
     <ClInclude Include="src\JKNL\json.h">
       <Filter>JKNL</Filter>
     </ClInclude>
-    <ClInclude Include="thirdparty\json11\json11.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\JKNL\Application.cpp">
@@ -55,6 +54,5 @@
     <ClCompile Include="src\JKNL\Reflection\reflection.cpp">
       <Filter>JKNL\Reflection</Filter>
     </ClCompile>
-    <ClCompile Include="thirdparty\json11\json11.cpp" />
   </ItemGroup>
 </Project>
