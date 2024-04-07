@@ -26,7 +26,9 @@ project "JKNL_Engine"
 
     includedirs
     {
-        "%{prj.name}/thirdparty/spdlog/include"
+        "%{prj.name}/src",
+        "%{prj.name}/thirdparty/spdlog/include",
+        "%{prj.name}/thirdparty/json11"
     }
 
     filter "system:windows"
@@ -75,7 +77,8 @@ project "SandBox"
     includedirs
     {
         "JKNL_Engine/thirdparty/spdlog/include",
-        "JKNL_Engine/src"
+        "JKNL_Engine/src",
+        "JKNL_Engine/thirdparty/json11"
     }
 
     links

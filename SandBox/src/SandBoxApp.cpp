@@ -22,6 +22,15 @@ public:
 		JKNL_CLIENT_ERROR("Error");
 		JKNL_CLIENT_CRITICAL("CRITICAL");
 
+		JKNL::WindowsResizeEvent wre(1200, 800);
+		if (wre.ISInCategory(JKNL::EventCategoryWindows)) {
+			JKNL_CLIENT_TRACE(wre);
+		}
+
+		if (wre.ISInCategory(JKNL::EventCategoryInput)){
+			JKNL_CLIENT_TRACE(wre);
+		}
+
 		while (true)
 		{
 

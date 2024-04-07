@@ -4,6 +4,12 @@
     <Filter Include="JKNL">
       <UniqueIdentifier>{F4EC867C-E023-880D-8910-6E107526040F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="JKNL\Events">
+      <UniqueIdentifier>{58FE3914-C4B3-B209-4DA8-ACE0B95CA90D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JKNL\Reflection">
+      <UniqueIdentifier>{2E23F729-9AAE-64EE-A3BF-E7E20FCAC0EE}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\JKNL.h" />
@@ -13,12 +19,31 @@
     <ClInclude Include="src\JKNL\EntryPoint.h">
       <Filter>JKNL</Filter>
     </ClInclude>
+    <ClInclude Include="src\JKNL\Events\ApplicationEvent.h">
+      <Filter>JKNL\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JKNL\Events\Event.h">
+      <Filter>JKNL\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JKNL\Events\KeyEvent.h">
+      <Filter>JKNL\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JKNL\Events\MouseEvevt.h">
+      <Filter>JKNL\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\JKNL\Log.h">
       <Filter>JKNL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JKNL\Reflection\reflection.h">
+      <Filter>JKNL\Reflection</Filter>
     </ClInclude>
     <ClInclude Include="src\JKNL\core.h">
       <Filter>JKNL</Filter>
     </ClInclude>
+    <ClInclude Include="src\JKNL\json.h">
+      <Filter>JKNL</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\json11\json11.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\JKNL\Application.cpp">
@@ -27,8 +52,9 @@
     <ClCompile Include="src\JKNL\Log.cpp">
       <Filter>JKNL</Filter>
     </ClCompile>
-    <ClCompile Include="src\JKNL\core.cpp">
-      <Filter>JKNL</Filter>
+    <ClCompile Include="src\JKNL\Reflection\reflection.cpp">
+      <Filter>JKNL\Reflection</Filter>
     </ClCompile>
+    <ClCompile Include="thirdparty\json11\json11.cpp" />
   </ItemGroup>
 </Project>

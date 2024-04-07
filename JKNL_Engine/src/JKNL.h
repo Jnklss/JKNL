@@ -5,5 +5,6 @@
 #include "JKNL/Application.h"
 #include "JKNL/Log.h"
 
+
 //Èë¿Úº¯Êý
 #include "JKNL/EntryPoint.h"

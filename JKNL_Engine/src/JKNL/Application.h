@@ -1,6 +1,7 @@
 #pragma once
 
 #include "core.h"
+#include "JKNL/Events/ApplicationEvent.h"
 
 namespace JKNL {
 	class JKNL_API Application

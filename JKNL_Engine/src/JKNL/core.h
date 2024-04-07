@@ -8,4 +8,12 @@
 	#endif // JKNL_BUILD_DLL
 #else
 	#error only support on Windows
-#endif // HZ_PLATFORM_WINDOWS
+#endif // JKNL_PLATFORM_WINDOWS
+
+//…Ë÷√Œª ˝
+#define BIT(x) (1<<x)
+
+#include <string>
+#include <functional>
+#include <sstream>
+#include <iostream>
