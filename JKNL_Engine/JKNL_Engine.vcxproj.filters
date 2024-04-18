@@ -7,8 +7,8 @@
     <Filter Include="JKNL\Events">
       <UniqueIdentifier>{58FE3914-C4B3-B209-4DA8-ACE0B95CA90D}</UniqueIdentifier>
     </Filter>
-    <Filter Include="JKNL\Reflection">
-      <UniqueIdentifier>{2E23F729-9AAE-64EE-A3BF-E7E20FCAC0EE}</UniqueIdentifier>
+    <Filter Include="JKNL\Window">
+      <UniqueIdentifier>{5B5F503D-C714-C932-5009-C309BCBDBF36}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,8 +34,11 @@
     <ClInclude Include="src\JKNL\Log.h">
       <Filter>JKNL</Filter>
     </ClInclude>
-    <ClInclude Include="src\JKNL\Reflection\reflection.h">
-      <Filter>JKNL\Reflection</Filter>
+    <ClInclude Include="src\JKNL\Window\Window.h">
+      <Filter>JKNL\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JKNL\Window\WindowBase.h">
+      <Filter>JKNL\Window</Filter>
     </ClInclude>
     <ClInclude Include="src\JKNL\core.h">
       <Filter>JKNL</Filter>
@@ -43,6 +46,7 @@
     <ClInclude Include="src\JKNL\json.h">
       <Filter>JKNL</Filter>
     </ClInclude>
+    <ClInclude Include="src\jknlpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\JKNL\Application.cpp">
@@ -51,8 +55,9 @@
     <ClCompile Include="src\JKNL\Log.cpp">
       <Filter>JKNL</Filter>
     </ClCompile>
-    <ClCompile Include="src\JKNL\Reflection\reflection.cpp">
-      <Filter>JKNL\Reflection</Filter>
+    <ClCompile Include="src\JKNL\Window\Window.cpp">
+      <Filter>JKNL\Window</Filter>
     </ClCompile>
+    <ClCompile Include="src\jknlpch.cpp" />
   </ItemGroup>
 </Project>
