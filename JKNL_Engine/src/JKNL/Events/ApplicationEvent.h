@@ -19,7 +19,7 @@ namespace JKNL {
 		}
 
 		EVENT_CLASS_TYPE(WindowResize)
-		EVENT_CLASS_CATEGORY(EventCategoryWindows)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 
 	private:
 		unsigned int m_Width, m_Height;
@@ -29,7 +29,7 @@ namespace JKNL {
 	public:
 		WindowClosedEvent() { }
 
-		EVENT_CLASS_CATEGORY(EventCategoryWindows)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 		EVENT_CLASS_TYPE(WindowClose)
 
 	private:
@@ -40,7 +40,7 @@ namespace JKNL {
 	public:
 		WindowFocusEvent() { }
 
-		EVENT_CLASS_CATEGORY(EventCategoryWindows)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 		EVENT_CLASS_TYPE(WindowFocus)
 
 	private:
@@ -52,7 +52,7 @@ namespace JKNL {
 		WindowMovedEvent() { }
 
 		EVENT_CLASS_TYPE(WindowMoved)
-		EVENT_CLASS_CATEGORY(EventCategoryWindows)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 
 	private:
 

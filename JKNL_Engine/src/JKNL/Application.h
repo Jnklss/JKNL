@@ -11,7 +11,7 @@ namespace JKNL {
 		Application();
 		virtual ~Application();
 		 
-		virtual void Run();
+		void Run();
 
 	private:
 		std::unique_ptr<WindowBase> m_Window;

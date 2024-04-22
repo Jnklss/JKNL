@@ -14,9 +14,9 @@ namespace JKNL {
 
 		void OnUpdate() override;
 
-		inline unsigned int GetWidth() { return m_Data.Width; }
-		inline unsigned int GetHeight() { return m_Data.Height; }
-
+		inline unsigned int GetWidth() const override { return m_Data.Width; };
+		inline unsigned int GetHeight() const override { return m_Data.Height; };
+		
 		inline void SetEventCallback(const EventCallbackFun& callback) override { m_Data.EventCallback = callback; }
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
@@ -32,7 +32,9 @@ namespace JKNL {
 			bool VSync;
 
 			EventCallbackFun EventCallback;
-		} m_Data;
+		};
+
+		WindowData m_Data;
 
 		GLFWwindow* m_Window;
 

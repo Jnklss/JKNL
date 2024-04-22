@@ -1,3 +1,4 @@
+#include "jknlpch.h"
 #include "Application.h"
 #include "Events/ApplicationEvent.h"
 
@@ -17,13 +18,19 @@ namespace JKNL {
 	{
 		WindowsResizeEvent e(m_Window->GetWidth(), m_Window->GetHeight());
 		if (e.ISInCategory(EventCategoryApplication)) {
+			JKNL_CORE_TRACE(e);
 			while (m_Running)
 			{
-				JKNL_CORE_TRACE(e);
 				glClearColor(1, 0, 1, 1);
 				glClear(GL_COLOR_BUFFER_BIT);
 				m_Window->OnUpdate();
 			}
 		}
+
+		if (e.ISInCategory(EventCategoryInput)) {
+			JKNL_CORE_TRACE(e);
+		}
+
+		while(true){ }
 	}
 }

@@ -21,7 +21,7 @@ namespace JKNL {
 		EventCategoryKeyboard		= BIT(2),
 		EventCategoryMouse			= BIT(3),
 		EventCategoryMouseButton	= BIT(4),
-		EventCategoryWindows		= BIT(5)
+		
 	};
 
 //使用宏快速生成对应的函数
