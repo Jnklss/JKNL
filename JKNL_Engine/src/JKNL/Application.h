@@ -13,7 +13,11 @@ namespace JKNL {
 		 
 		void Run();
 
+		void OnEvent(Event& e);
+
 	private:
+		bool OnWindowClose(WindowClosedEvent& e);
+
 		std::unique_ptr<WindowBase> m_Window;
 		bool m_Running = true;
 	};

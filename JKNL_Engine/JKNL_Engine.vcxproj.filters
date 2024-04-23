@@ -28,7 +28,7 @@
     <ClInclude Include="src\JKNL\Events\KeyEvent.h">
       <Filter>JKNL\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\JKNL\Events\MouseEvevt.h">
+    <ClInclude Include="src\JKNL\Events\MouseEvent.h">
       <Filter>JKNL\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\JKNL\Log.h">

@@ -87,9 +87,9 @@ namespace JKNL {
 	};
 
 	//ÊÍ·ÅÊÂ¼þ
-	class JKNL_API MouseButtonRelaesed : public MouseButtonEvent {
+	class JKNL_API MouseButtonRelaesedEvent : public MouseButtonEvent {
 	public:
-		MouseButtonRelaesed(int button) :
+		MouseButtonRelaesedEvent(int button) :
 			MouseButtonEvent(button) { }
 
 		EVENT_CLASS_TYPE(MouseButtonReleased)

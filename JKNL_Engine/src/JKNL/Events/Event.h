@@ -44,9 +44,7 @@ namespace JKNL {
 			return GetCategoryFlags() & category; 
 		}
 			
-
-	protected:
-		bool m_Handled = false;	
+		bool Handled = false;	
 	};
 
 	//事件调度器
@@ -63,7 +61,7 @@ namespace JKNL {
 		template<typename T>
 		bool Dispatch(EventFn<T> func) {	//根据事件类型调度处理函数
 			if (m_Event.GetEventType() == T::GetStaticType()) {
-				m_Event.m_Handled = func(*(T*)&m_Event); //调用func并返回到m_Handled
+				m_Event.Handled |= func(static_cast<T&>(m_Event)); //调用func并返回到m_Handled
 				return true;
 			}
 			return false;

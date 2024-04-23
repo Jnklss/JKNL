@@ -152,7 +152,7 @@
     <ClInclude Include="src\JKNL\Events\ApplicationEvent.h" />
     <ClInclude Include="src\JKNL\Events\Event.h" />
     <ClInclude Include="src\JKNL\Events\KeyEvent.h" />
-    <ClInclude Include="src\JKNL\Events\MouseEvevt.h" />
+    <ClInclude Include="src\JKNL\Events\MouseEvent.h" />
     <ClInclude Include="src\JKNL\Log.h" />
     <ClInclude Include="src\JKNL\Window\Window.h" />
     <ClInclude Include="src\JKNL\Window\WindowBase.h" />
