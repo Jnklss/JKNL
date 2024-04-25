@@ -52,7 +52,7 @@ project "JKNL_Engine"
         defines
         {
             "JKNL_BUILD_DLL",
-            "JKNL_PLATFORM_WINDOWS"
+            "JKNL_PLATFORM_WINDOWS",
         }
 
         postbuildcommands
@@ -62,14 +62,20 @@ project "JKNL_Engine"
 
     filter "configurations:Debug"
         defines "JKNL_DEBUG"
+        staticruntime "off"
+        runtime "Debug"
         symbols "On"
     
     filter "configurations:RELEASE"
         defines "JKNL_RELEASE"
+        staticruntime "off"
+        runtime "Release"
         optimize "On"
     
     filter "configurations:Dist"
         defines "JKNL_DIST"
+        staticruntime "off"
+        runtime "Release"
         optimize "On"
     
 
@@ -112,12 +118,18 @@ project "SandBox"
 
     filter "configurations:Debug"
         defines "JKNL_DEBUG"
+        staticruntime "off"
+        runtime "Debug"
         symbols "On"
     
     filter "configurations:RELEASE"
         defines "JKNL_RELEASE"
+        staticruntime "off"
+        runtime "Release"
         optimize "On"
     
     filter "configurations:Dist"
         defines "JKNL_DIST"
+        staticruntime "off"
+        runtime "Release"
         optimize "On"   

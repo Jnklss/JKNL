@@ -82,7 +82,7 @@
       <AdditionalIncludeDirectories>src;thirdparty\spdlog\include;thirdparty\json11;thirdparty\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -106,7 +106,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -131,7 +131,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -153,6 +153,8 @@
     <ClInclude Include="src\JKNL\Events\Event.h" />
     <ClInclude Include="src\JKNL\Events\KeyEvent.h" />
     <ClInclude Include="src\JKNL\Events\MouseEvent.h" />
+    <ClInclude Include="src\JKNL\Layer\Layer.h" />
+    <ClInclude Include="src\JKNL\Layer\LayerStack.h" />
     <ClInclude Include="src\JKNL\Log.h" />
     <ClInclude Include="src\JKNL\Window\Window.h" />
     <ClInclude Include="src\JKNL\Window\WindowBase.h" />
@@ -162,6 +164,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\JKNL\Application.cpp" />
+    <ClCompile Include="src\JKNL\Layer\Layer.cpp" />
+    <ClCompile Include="src\JKNL\Layer\LayerStack.cpp" />
     <ClCompile Include="src\JKNL\Log.cpp" />
     <ClCompile Include="src\JKNL\Window\Window.cpp" />
     <ClCompile Include="src\jknlpch.cpp" />

@@ -7,6 +7,9 @@
     <Filter Include="JKNL\Events">
       <UniqueIdentifier>{58FE3914-C4B3-B209-4DA8-ACE0B95CA90D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="JKNL\Layer">
+      <UniqueIdentifier>{C0D0C2CA-AC88-0418-1590-DD7301679F08}</UniqueIdentifier>
+    </Filter>
     <Filter Include="JKNL\Window">
       <UniqueIdentifier>{5B5F503D-C714-C932-5009-C309BCBDBF36}</UniqueIdentifier>
     </Filter>
@@ -31,6 +34,12 @@
     <ClInclude Include="src\JKNL\Events\MouseEvent.h">
       <Filter>JKNL\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\JKNL\Layer\Layer.h">
+      <Filter>JKNL\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JKNL\Layer\LayerStack.h">
+      <Filter>JKNL\Layer</Filter>
+    </ClInclude>
     <ClInclude Include="src\JKNL\Log.h">
       <Filter>JKNL</Filter>
     </ClInclude>
@@ -51,6 +60,12 @@
   <ItemGroup>
     <ClCompile Include="src\JKNL\Application.cpp">
       <Filter>JKNL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JKNL\Layer\Layer.cpp">
+      <Filter>JKNL\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JKNL\Layer\LayerStack.cpp">
+      <Filter>JKNL\Layer</Filter>
     </ClCompile>
     <ClCompile Include="src\JKNL\Log.cpp">
       <Filter>JKNL</Filter>

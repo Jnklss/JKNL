@@ -34,6 +34,9 @@ namespace JKNL {
 
 	//Event基类
 	class JKNL_API Event {
+		
+		friend class EventDispatcher;
+
 	public:
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
@@ -48,7 +51,7 @@ namespace JKNL {
 	};
 
 	//事件调度器
-	class JKNL_API EventDispatcher{
+	class JKNL_API EventDispatcher {
 
 		template<typename T>
 		using EventFn = std::function<bool(T&)>; //注册回调函数
