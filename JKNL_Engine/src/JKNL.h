@@ -6,6 +6,7 @@
 #include "JKNL/Log.h"
 #include "JKNL/Layer/Layer.h"
 
+#include "JKNL/ImGui/ImGuiLayer.h"
 
 //Èë¿Úº¯Êý
 #include "JKNL/EntryPoint.h"

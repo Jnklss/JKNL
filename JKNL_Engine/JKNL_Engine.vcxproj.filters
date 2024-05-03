@@ -56,6 +56,10 @@
       <Filter>JKNL</Filter>
     </ClInclude>
     <ClInclude Include="src\jknlpch.h" />
+    <ClInclude Include="src\JKNL\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\JKNL\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="thirdparty\imgui\backends\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="src\JKNL\OpenGL\ImGuiOpenGLRendererLoader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\JKNL\Application.cpp">
@@ -74,5 +78,7 @@
       <Filter>JKNL\Window</Filter>
     </ClCompile>
     <ClCompile Include="src\jknlpch.cpp" />
+    <ClCompile Include="src\JKNL\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\JKNL\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>

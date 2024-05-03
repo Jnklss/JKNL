@@ -20,6 +20,10 @@ namespace JKNL {
 		void PushLayer(Layer* layer);
 		void PushOverLayer(Layer* overlay);
 
+		inline WindowBase& GetWindow() { return *m_Window; }
+
+		inline static Application& Get() { return *s_Instance; }
+
 	private:
 		bool OnWindowClose(WindowClosedEvent& e);
 
@@ -27,6 +31,8 @@ namespace JKNL {
 		bool m_Running = true;
 
 		LayerStack m_LayerStack;
+
+		static Application* s_Instance;
 	};
 
 	//由客户端定义

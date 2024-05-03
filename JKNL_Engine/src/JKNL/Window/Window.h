@@ -2,6 +2,10 @@
 
 #include "WindowBase.h"
 
+#include "JKNL/Events/ApplicationEvent.h"
+#include "JKNL/Events/KeyEvent.h"
+#include "JKNL/Events/MouseEvent.h"
+
 #include <GLFW/glfw3.h>
 
 namespace JKNL {

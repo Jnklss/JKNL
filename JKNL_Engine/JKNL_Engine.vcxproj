@@ -78,8 +78,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>JKNL_BUILD_DLL;JKNL_PLATFORM_WINDOWS;JKNL_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;thirdparty\spdlog\include;thirdparty\json11;thirdparty\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>JKNL_BUILD_DLL;JKNL_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;JKNL_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;thirdparty\spdlog\include;thirdparty\json11;thirdparty\GLFW\include;thirdparty\Glad\include;thirdparty\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -99,8 +99,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>JKNL_BUILD_DLL;JKNL_PLATFORM_WINDOWS;JKNL_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;thirdparty\spdlog\include;thirdparty\json11;thirdparty\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>JKNL_BUILD_DLL;JKNL_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;JKNL_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;thirdparty\spdlog\include;thirdparty\json11;thirdparty\GLFW\include;thirdparty\Glad\include;thirdparty\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -124,8 +124,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>JKNL_BUILD_DLL;JKNL_PLATFORM_WINDOWS;JKNL_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;thirdparty\spdlog\include;thirdparty\json11;thirdparty\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>JKNL_BUILD_DLL;JKNL_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;JKNL_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;thirdparty\spdlog\include;thirdparty\json11;thirdparty\GLFW\include;thirdparty\Glad\include;thirdparty\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -153,26 +153,38 @@
     <ClInclude Include="src\JKNL\Events\Event.h" />
     <ClInclude Include="src\JKNL\Events\KeyEvent.h" />
     <ClInclude Include="src\JKNL\Events\MouseEvent.h" />
+    <ClInclude Include="src\JKNL\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\JKNL\Layer\Layer.h" />
     <ClInclude Include="src\JKNL\Layer\LayerStack.h" />
     <ClInclude Include="src\JKNL\Log.h" />
+    <ClInclude Include="src\JKNL\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\JKNL\OpenGL\ImGuiOpenGLRendererLoader.h" />
     <ClInclude Include="src\JKNL\Window\Window.h" />
     <ClInclude Include="src\JKNL\Window\WindowBase.h" />
     <ClInclude Include="src\JKNL\core.h" />
     <ClInclude Include="src\JKNL\json.h" />
     <ClInclude Include="src\jknlpch.h" />
+    <ClInclude Include="thirdparty\imgui\backends\imgui_impl_opengl3_loader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\JKNL\Application.cpp" />
+    <ClCompile Include="src\JKNL\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\JKNL\Layer\Layer.cpp" />
     <ClCompile Include="src\JKNL\Layer\LayerStack.cpp" />
     <ClCompile Include="src\JKNL\Log.cpp" />
+    <ClCompile Include="src\JKNL\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\JKNL\Window\Window.cpp" />
     <ClCompile Include="src\jknlpch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="thirdparty\GLFW\GLFW.vcxproj">
       <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="thirdparty\Glad\Glad.vcxproj">
+      <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="thirdparty\imgui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

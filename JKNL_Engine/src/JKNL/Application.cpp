@@ -2,15 +2,20 @@
 #include "Application.h"
 #include "Events/ApplicationEvent.h"
 
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 namespace JKNL {
 
 	//绑定事件的回调函数
 #define BIND_EVENT_FUN(x) std::bind(&x , this, std::placeholders::_1)
 
+	Application* Application::s_Instance = nullptr;
+
 	Application::Application()
 	{
+		JKNL_CORE_ASSERT(!s_Instance,"Application already exists!")
+		s_Instance = this;
+
 		m_Window = std::unique_ptr<WindowBase>(WindowBase::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FUN(Application::OnEvent));
 	}
@@ -22,11 +27,13 @@ namespace JKNL {
 	void Application::PushLayer(Layer* layer)
 	{
 		m_LayerStack.PushLayer(layer);
+		layer->OnAttach();
 	}
 
 	void Application::PushOverLayer(Layer* overlay)
 	{
 		m_LayerStack.PushOverlay(overlay);
+		overlay->OnAttach();
 	}
 
 	void Application::OnEvent(Event& e)

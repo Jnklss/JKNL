@@ -13,8 +13,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- 包含相对于根文件夹的目录(解决方案目录)
 IncludeDir = {}
 IncludeDir["GLFW"] = "JKNL_Engine/thirdparty/GLFW/include"
+IncludeDir["Glad"] = "JKNL_Engine/thirdparty/Glad/include"
+IncludeDir["ImGui"] = "JKNL_Engine/thirdparty/imgui"
 
 include "JKNL_Engine/thirdparty/GLFW"
+include "JKNL_Engine/thirdparty/Glad"
+include "JKNL_Engine/thirdparty/imgui"
 
 project "JKNL_Engine"
     location "JKNL_Engine"
@@ -35,12 +39,16 @@ project "JKNL_Engine"
         "%{prj.name}/src",
         "%{prj.name}/thirdparty/spdlog/include",
         "%{prj.name}/thirdparty/json11",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}",
+        "%{IncludeDir.ImGui}"
     }
 
     links
     {
-        "GLFW"  ,
+        "GLFW",
+        "Glad",
+        "ImGui",
         "opengl32.lib"
     }
 
@@ -53,7 +61,9 @@ project "JKNL_Engine"
         {
             "JKNL_BUILD_DLL",
             "JKNL_PLATFORM_WINDOWS",
+            "GLFW_INCLUDE_NONE"
         }
+
 
         postbuildcommands
         {

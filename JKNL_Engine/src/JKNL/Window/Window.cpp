@@ -1,9 +1,9 @@
 #include "jknlpch.h"
 #include "Window.h"
 
-#include "JKNL/Events/ApplicationEvent.h"
-#include "JKNL/Events/KeyEvent.h"
-#include "JKNL/Events/MouseEvent.h"
+
+#include <glad/glad.h>
+
 
 namespace JKNL {
 
@@ -45,7 +45,12 @@ namespace JKNL {
 		}
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, props.Title.c_str(), nullptr, nullptr);
+		
 		glfwMakeContextCurrent(m_Window);
+
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		JKNL_CORE_ASSERT(status, "Failed to initialize Glad!");
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

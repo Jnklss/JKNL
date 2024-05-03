@@ -25,6 +25,7 @@ public:
 	SandBox()
 	{
 		PushLayer(new ExampleLayer());
+		PushOverLayer(new JKNL::ImGuiLayer());
 	}
 
 	~SandBox()
